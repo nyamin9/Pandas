@@ -93,7 +93,6 @@ bicycle_EWT.iplot(kind = 'scatter')
 
 # 3.2 plotly로 시각화
 bicycle_EWT_plotly = bicycle_EWT.reset_index()
-bicycle_EWT_plotly = pd.merge(bicycle_EWT_date, bicycle_EWT_plotly, on = ['year','month'], how = 'inner')
 bicycle_EWT_plotly[['year','month']] = bicycle_EWT_plotly[['year','month']].astype('str')
 bicycle_EWT_plotly['Date'] = pd.to_datetime(bicycle_EWT_plotly['year'] + "-" + bicycle_EWT_plotly['month'])
 bicycle_EWT_plotly = bicycle_EWT_plotly.sort_values('Date')
